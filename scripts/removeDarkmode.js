@@ -1,13 +1,13 @@
 const fs = require("fs");
 const path = require("path");
 
-const rootDirs = ["src/app", "src/hooks", "src/layouts", "src/styles"];
+const rootDirs = ["src/pages", "src/partials", "src/styles"];
 const configFiles = [
   {
     filePath: "tailwind.config.js",
     patterns: ["darkmode:\\s*{[^}]*},", 'darkMode:\\s*"class",'],
   },
-  { filePath: "src/config/theme.json", patterns: ["colors.darkmode"] },
+  { filePath: "src/theme.json", patterns: ["colors.darkmode"] },
 ];
 
 rootDirs.forEach(removeDarkModeFromPages);
